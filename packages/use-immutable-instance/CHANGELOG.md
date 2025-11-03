@@ -1,5 +1,11 @@
 # use-immutable-instance
 
+## 0.0.2
+
+### Patch Changes
+
+- Copy README and LICENSE to dist folder during build
+
 ## 0.0.1
 
 ### Patch Changes
