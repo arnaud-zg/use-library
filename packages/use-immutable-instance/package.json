@@ -47,7 +47,8 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/arnaud-zg/use-library.git"
+    "url": "https://github.com/arnaud-zg/use-library.git",
+    "directory": "packages/use-immutable-instance"
   },
   "bugs": {
     "url": "https://github.com/arnaud-zg/use-library/issues"
