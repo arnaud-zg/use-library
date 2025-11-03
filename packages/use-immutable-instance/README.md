@@ -1,5 +1,9 @@
 # use-immutable-instance
 
+[![npm version](https://img.shields.io/npm/v/use-immutable-instance.svg)](https://www.npmjs.com/package/use-immutable-instance)
+[![npm monthly downloads](https://img.shields.io/npm/dm/use-immutable-instance.svg)](https://www.npmjs.com/package/use-immutable-instance)
+[![License: MIT](https://img.shields.io/npm/l/use-immutable-instance.svg)](https://www.npmjs.com/package/use-immutable-instance)
+
 A React hook that makes **immutable class instances reactive** in React. It’s designed for front-end developers who want to separate domain logic from UI, following principles like Object Calisthenics.
 
 Instead of manually bridging immutable objects with state, this hook lets you keep domain logic encapsulated while making the UI reactive.

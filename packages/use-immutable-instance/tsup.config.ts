@@ -1,6 +1,7 @@
 import { BuildOptions, Plugin } from "esbuild";
+import fs, { readFileSync } from "fs";
+import path from "path";
 import { defineConfig } from "tsup";
-import { readFileSync } from "fs";
 
 const pkg = JSON.parse(readFileSync("./package.json", "utf8"));
 const version = pkg.version;
@@ -19,6 +20,32 @@ const footerText = `
 // Use immutable class instances in React
 // Copyright © ${currentYear} | Made with ❤️
 `;
+
+/**
+ * Creates a build-time plugin to copy static files (like README.md) to the output directory
+ * @param files Array of file paths to copy from project root to the output directory
+ * @param outDir Destination folder (usually tsup's dist folder)
+ * @returns An esbuild plugin that copies the specified files after build
+ */
+export function createCopyFilesPlugin(files: string[], outDir: string): Plugin {
+  return {
+    name: "copy-files-plugin",
+    setup(build) {
+      build.onEnd(() => {
+        files.forEach((file) => {
+          const src = path.resolve(process.cwd(), file);
+          const dest = path.resolve(outDir, path.basename(file));
+          if (fs.existsSync(src)) {
+            fs.copyFileSync(src, dest);
+            console.log(`✅ Copied ${file} to ${outDir}`);
+          } else {
+            console.warn(`⚠️ File not found: ${file}`);
+          }
+        });
+      });
+    },
+  };
+}
 
 /**
  * Creates a build time logging plugin
@@ -91,5 +118,8 @@ export default defineConfig({
   outExtension: ({ format }) => ({ js: `.${format}.js` }),
 
   // Plugins
-  esbuildPlugins: [createBuildTimePlugin()],
+  esbuildPlugins: [
+    createBuildTimePlugin(),
+    createCopyFilesPlugin(["README.md", "LICENSE"], "dist"),
+  ],
 });

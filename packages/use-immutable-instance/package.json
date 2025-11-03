@@ -37,5 +37,12 @@
   },
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "keywords": [
+    "react",
+    "immutable",
+    "state",
+    "domain-logic"
+  ],
+  "license": "MIT"
 }
