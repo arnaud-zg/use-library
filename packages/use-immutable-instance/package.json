@@ -5,6 +5,7 @@
   "type": "module",
   "main": "./dist/index.esm.js",
   "types": "./dist/index.d.ts",
+  "sideEffects": false,
   "exports": {
     ".": {
       "import": "./dist/index.esm.js",
@@ -44,5 +45,15 @@
     "state",
     "domain-logic"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/arnaud-zg/use-library.git"
+  },
+  "bugs": {
+    "url": "https://github.com/arnaud-zg/use-library/issues"
+  },
+  "homepage": "https://github.com/arnaud-zg/use-library#readme",
+  "funding": "https://github.com/sponsors/arnaud-zg",
+  "author": "Arnaud Zheng",
   "license": "MIT"
 }
