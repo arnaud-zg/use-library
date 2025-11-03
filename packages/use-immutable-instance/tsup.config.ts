@@ -16,7 +16,7 @@ const buildEnvironment = {
 const currentYear = new Date().getFullYear();
 const footerText = `
 // 🚩 use-immutable-instance v${version}
-// Immutable object class helper for React
+// Use immutable class instances in React
 // Copyright © ${currentYear} | Made with ❤️
 `;
 
