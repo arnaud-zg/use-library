@@ -55,6 +55,12 @@ export const CartComponent = ({ product }) => {
 - Minimal boilerplate, ideal for **immutable objects**.
 - Perfect companion for applying **Object Calisthenics** principles.
 
+## Resources
+
+<a href="https://open.substack.com/pub/arnaudzg/p/applying-object-calisthenics-principles?r=iih51&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true">
+  <img src="https://raw.githubusercontent.com/arnaud-zg/use-library/refs/heads/main/packages/use-immutable-instance/assets/article.jpg" alt="Applying Object Calisthenics Principles" width="300"/>
+</a>
+
 ## License
 
 MIT
