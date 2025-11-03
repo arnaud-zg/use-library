@@ -1,5 +1,11 @@
 # use-immutable-instance
 
+## 0.0.4
+
+### Patch Changes
+
+- Add package directly field
+
 ## 0.0.3
 
 ### Patch Changes
