@@ -12,8 +12,8 @@ It serves as a central place to:
 ```
 .
 ├─ packages/
-│  └─ immutable-instance/   # Example React hook
-└─ .changeset/                  # Changesets for versioning and publishing
+│  └─ immutable-instance/   # Example library
+└─ .changeset/              # Changesets for versioning and publishing
 ```
 
 ## Workflow
