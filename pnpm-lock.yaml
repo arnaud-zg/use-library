@@ -36,7 +36,7 @@ importers:
         specifier: ^4.0.6
         version: 4.0.6(@types/node@24.10.0)(@vitest/ui@4.0.6)(happy-dom@20.0.10)
 
-  packages/use-immutable-instance:
+  packages/immutable-instance:
     devDependencies:
       '@testing-library/react':
         specifier: ^14.3.1

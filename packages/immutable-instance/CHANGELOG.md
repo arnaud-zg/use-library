@@ -1,4 +1,10 @@
-# use-immutable-instance
+# immutable-instance
+
+## 0.0.7
+
+### Patch Changes
+
+- Rename package to immutable-instance
 
 ## 0.0.6
 
@@ -34,4 +40,4 @@
 
 ### Patch Changes
 
-- feat: create use-immutable-instance package
+- feat: create immutable-instance package

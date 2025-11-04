@@ -12,7 +12,7 @@ It serves as a central place to:
 ```
 .
 ├─ packages/
-│  └─ use-immutable-instance/   # Example React hook
+│  └─ immutable-instance/   # Example React hook
 └─ .changeset/                  # Changesets for versioning and publishing
 ```
 
@@ -45,7 +45,7 @@ pnpm changeset publish
 
 ## Available Hooks
 
-- [use-immutable-instance](./packages/use-immutable-instance) - Use immutable class instances in React
+- [immutable-instance](./packages/immutable-instance) - Use immutable class instances in React
 
 More hooks will be added over time.
 

@@ -1,8 +1,8 @@
-# use-immutable-instance
+# immutable-instance
 
-[![npm version](https://img.shields.io/npm/v/use-immutable-instance.svg)](https://www.npmjs.com/package/use-immutable-instance)
-[![npm monthly downloads](https://img.shields.io/npm/dm/use-immutable-instance.svg)](https://www.npmjs.com/package/use-immutable-instance)
-[![License: MIT](https://img.shields.io/npm/l/use-immutable-instance.svg)](https://www.npmjs.com/package/use-immutable-instance)
+[![npm version](https://img.shields.io/npm/v/immutable-instance.svg)](https://www.npmjs.com/package/immutable-instance)
+[![npm monthly downloads](https://img.shields.io/npm/dm/immutable-instance.svg)](https://www.npmjs.com/package/immutable-instance)
+[![License: MIT](https://img.shields.io/npm/l/immutable-instance.svg)](https://www.npmjs.com/package/immutable-instance)
 
 A small utility that makes **immutable class instances reactive**.  
 It provides:
@@ -17,11 +17,11 @@ Designed for developers who want to keep domain logic separate from UI, followin
 ## Installation
 
 ```bash
-npm install use-immutable-instance
+npm install immutable-instance
 # or
-pnpm add use-immutable-instance
+pnpm add immutable-instance
 # or
-yarn add use-immutable-instance
+yarn add immutable-instance
 ```
 
 ## Usage
@@ -29,7 +29,7 @@ yarn add use-immutable-instance
 ### React with `useImmutableInstance`
 
 ```ts
-import { useImmutableInstance } from "use-immutable-instance";
+import { useImmutableInstance } from "immutable-instance";
 
 class Cart {
   items = [];
@@ -59,7 +59,7 @@ export const CartComponent = ({ product }) => {
 
 ```ts
 import { ref } from "vue";
-import { createImmutableProxy } from "use-immutable-instance";
+import { createImmutableProxy } from "immutable-instance";
 
 class Cart {
   constructor(public items: any[] = []) {}
@@ -99,7 +99,7 @@ const handleAdd = (product) => cart.value.addItem(product);
 ## Resources
 
 <a href="https://open.substack.com/pub/arnaudzg/p/applying-object-calisthenics-principles?r=iih51&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true">
-  <img src="https://raw.githubusercontent.com/arnaud-zg/use-library/refs/heads/main/packages/use-immutable-instance/assets/article.jpg" alt="Applying Object Calisthenics Principles" width="300"/>
+  <img src="https://raw.githubusercontent.com/arnaud-zg/use-library/refs/heads/main/packages/immutable-instance/assets/article.jpg" alt="Applying Object Calisthenics Principles" width="300"/>
 </a>
 
 ## License
