@@ -45,7 +45,7 @@ pnpm changeset publish
 
 ## Available Hooks
 
-- [immutable-instance](./packages/immutable-instance) - Use immutable class instances in React
+- [immutable-instance](./packages/immutable-instance) - Makes immutable class instances reactive for front-end application
 
 More hooks will be added over time.
 
