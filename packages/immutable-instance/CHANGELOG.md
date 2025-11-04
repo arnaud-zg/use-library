@@ -1,5 +1,11 @@
 # immutable-instance
 
+## 0.0.8
+
+### Patch Changes
+
+- Update package to immutable-instance
+
 ## 0.0.7
 
 ### Patch Changes
