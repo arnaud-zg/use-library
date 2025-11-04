@@ -1,6 +1,6 @@
 {
   "name": "use-immutable-instance",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Use immutable class instances in React",
   "type": "module",
   "main": "./dist/index.esm.js",
