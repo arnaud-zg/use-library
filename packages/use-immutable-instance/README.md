@@ -4,9 +4,15 @@
 [![npm monthly downloads](https://img.shields.io/npm/dm/use-immutable-instance.svg)](https://www.npmjs.com/package/use-immutable-instance)
 [![License: MIT](https://img.shields.io/npm/l/use-immutable-instance.svg)](https://www.npmjs.com/package/use-immutable-instance)
 
-A React hook that makes **immutable class instances reactive** in React. It’s designed for front-end developers who want to separate domain logic from UI, following principles like Object Calisthenics.
+A small utility that makes **immutable class instances reactive**.  
+It provides:
 
-Instead of manually bridging immutable objects with state, this hook lets you keep domain logic encapsulated while making the UI reactive.
+- `useImmutableInstance` → React hook
+- `createImmutableProxy` → Framework-agnostic helper (Vue, Svelte, Solid, plain JS)
+
+Designed for developers who want to keep domain logic separate from UI, following principles like **Object Calisthenics**.
+
+---
 
 ## Installation
 
@@ -20,6 +26,8 @@ yarn add use-immutable-instance
 
 ## Usage
 
+### React with `useImmutableInstance`
+
 ```ts
 import { useImmutableInstance } from "use-immutable-instance";
 
@@ -31,7 +39,6 @@ class Cart {
   totalItems() {
     return this.items.length;
   }
-  // ...other methods
 }
 
 export const CartComponent = ({ product }) => {
@@ -48,12 +55,46 @@ export const CartComponent = ({ product }) => {
 };
 ```
 
+### VueJS with `createImmutableProxy`
+
+```ts
+import { ref } from "vue";
+import { createImmutableProxy } from "use-immutable-instance";
+
+class Cart {
+  constructor(public items: any[] = []) {}
+  addItem(product) {
+    return new Cart([...this.items, product]);
+  }
+  totalItems() {
+    return this.items.length;
+  }
+}
+
+const cart = ref(
+  createImmutableProxy(new Cart(), (newInstance) => {
+    cart.value = newInstance;
+  })
+);
+
+const handleAdd = (product) => cart.value.addItem(product);
+```
+
+```html
+<template>
+  <div>
+    <button @click="handleAdd('Product')">Add Product</button>
+    <p>Total items: {{ cart.value.totalItems() }}</p>
+  </div>
+</template>
+```
+
 ## Benefits
 
 - Keeps **domain logic** and UI separate.
 - Automatically re-renders components when instances change.
 - Minimal boilerplate, ideal for **immutable objects**.
-- Perfect companion for applying **Object Calisthenics** principles.
+- Works in React (hook) or any framework via `createImmutableProxy`.
 
 ## Resources
 

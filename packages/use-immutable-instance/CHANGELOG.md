@@ -1,5 +1,17 @@
 # use-immutable-instance
 
+## 0.0.6
+
+### Patch Changes
+
+- Update documentation
+
+## 0.0.5
+
+### Patch Changes
+
+- Update documentation
+
 ## 0.0.4
 
 ### Patch Changes
